@@ -1,0 +1,16 @@
+/*
+    @media only screen and (max-width: 550px) {}
+    @media only screen and (min-width: 551px) and (max-width: 1058px) {}
+    @media only screen and (min-width: 1059px) {}
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
