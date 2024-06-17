@@ -1,0 +1,60 @@
+@media only screen and (max-width: 550px) {
+	.article-container {
+		gap: 1rem;
+	}
+	.article-card {
+		width: 350px;
+		height: 350px;
+	}
+	.article-card img {
+		height: 200px;
+	}
+}
+@media only screen and (min-width: 551px) {
+	.article-container {
+		gap: 2rem;
+	}
+	.article-card {
+		width: 400px;
+		height: 400px;
+	}
+	.article-card img {
+		height: 250px;
+	}
+}
+.article-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;
+}
+.article-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.article-card {
+	border: 3px solid lightcoral;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.article-card img {
+	object-fit: cover;
+	width: 100%;
+}
+:is(.article-card) :is(.text-container) {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	text-transform: capitalize;
+	padding: 5px;
+}
+:is(.article-card) :is(h3) {
+	padding: 5px;
+}
+:is(.article-card) :is(.author) {
+	color: pink;
+	font-style: italic;
+}
