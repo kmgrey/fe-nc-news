@@ -1,0 +1,15 @@
+@media only screen and (max-width: 550px) {
+}
+@media only screen and (min-width: 551px) and (max-width: 1058px) {
+}
+@media only screen and (min-width: 1059px) {
+}
+.comment-card-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.comment-card {
+	border: 3px solid lightseagreen;
+	padding: 10px;
+}
