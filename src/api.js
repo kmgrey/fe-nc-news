@@ -10,6 +10,12 @@ export const fetchArticles = () => {
 	});
 };
 
+export const fetchArticleById = (article_id) => {
+	return newsApi.get(`/articles/${article_id}`).then(({ data }) => {
+		return data.article;
+	});
+};
+
 // export const fetchArticles = (topic) => {
 // 	return newsApi.get('/articles', { params: { topic } }).then(({ data }) => {
 // 		return data.items;

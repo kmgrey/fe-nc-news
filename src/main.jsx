@@ -4,7 +4,8 @@ import App from './App.jsx';
 import './index.css';
 import './styles/Header.css';
 import './styles/NavBar.css';
-import './styles/Articles.css';
+import './styles/ArticleCards.css';
+import './styles/Article.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>

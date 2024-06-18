@@ -1,5 +1,5 @@
 @media only screen and (max-width: 550px) {
-	.article-container {
+	.article-card-container {
 		gap: 1rem;
 	}
 	.article-card {
@@ -11,7 +11,7 @@
 	}
 }
 @media only screen and (min-width: 551px) {
-	.article-container {
+	.article-card-container {
 		gap: 2rem;
 	}
 	.article-card {
@@ -28,7 +28,7 @@
 	align-items: center;
 	padding: 15px;
 }
-.article-container {
+.article-card-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;

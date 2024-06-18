@@ -1,0 +1,45 @@
+@media only screen and (max-width: 550px) {
+	.article-container {
+		gap: 1rem;
+	}
+	.article img {
+		width: 400px;
+	}
+	.sidebar {
+		display: none;
+	}
+}
+@media only screen and (min-width: 551px) and (max-width: 1058px) {
+    .article-container {
+        gap: 1.5rem;
+    }
+}
+@media only screen and (min-width: 1059px) {
+    .article-container {
+        gap: 2rem;
+		max-width: 60vw;
+    }
+	.sidebar {
+		width: 20vw;
+	}
+	:is(.sidebar) :is(.article-card) {
+		max-width: 18vw;
+		height: 300px;
+	}
+}
+.article {
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+}
+.article-container {
+	display: flex;
+	flex-direction: column;
+}
+.article img {
+	max-width: 600px;
+}
+.sidebar {
+	border: 3px solid lightcoral;
+}
+
