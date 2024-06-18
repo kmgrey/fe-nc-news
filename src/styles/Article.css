@@ -10,15 +10,15 @@
 	}
 }
 @media only screen and (min-width: 551px) and (max-width: 1058px) {
-    .article-container {
-        gap: 1.5rem;
-    }
+	.article-container {
+		gap: 1.5rem;
+	}
 }
 @media only screen and (min-width: 1059px) {
-    .article-container {
-        gap: 2rem;
+	.article-container {
+		gap: 2rem;
 		max-width: 60vw;
-    }
+	}
 	.sidebar {
 		width: 20vw;
 	}
@@ -31,6 +31,7 @@
 	padding: 15px;
 	display: flex;
 	justify-content: center;
+	gap: 1rem;
 }
 .article-container {
 	display: flex;
@@ -42,4 +43,3 @@
 .sidebar {
 	border: 3px solid lightcoral;
 }
-

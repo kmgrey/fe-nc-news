@@ -6,6 +6,7 @@ import './styles/Header.css';
 import './styles/NavBar.css';
 import './styles/ArticleCards.css';
 import './styles/Article.css';
+import './styles/Comments.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>

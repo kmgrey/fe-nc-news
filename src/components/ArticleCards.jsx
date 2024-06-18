@@ -16,6 +16,7 @@ export const ArticleCards = ({ limit }) => {
 	}, []);
 
 	const displayedArticles = limit ? articles.slice(0, limit) : articles;
+	if (!displayedArticles) return <p>Loading articles...</p>;
 
 	return (
 		<ul className="article-card-container">
