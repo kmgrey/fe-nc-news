@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchArticleById } from '../api';
 import { ArticleCards } from './ArticleCards';
 import { Comments } from './Comments';
+import { ArticleVotes } from './ArticleVotes';
 
 export const Article = () => {
 	const { article_id } = useParams();
@@ -32,7 +33,8 @@ export const Article = () => {
 					</div>
 					<img src={article.article_img_url} alt={`Image for ${article.title}`} />
 					<p>{article.body}</p>
-					<Comments />
+					<ArticleVotes article_id={article_id} initialVotes={article.votes} />
+					<Comments article_id={article_id} />
 				</article>
 				<article className="sidebar">
 					<ArticleCards limit={5} />
