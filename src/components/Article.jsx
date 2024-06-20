@@ -4,6 +4,7 @@ import { fetchArticleById } from '../api';
 import { ArticleCards } from './ArticleCards';
 import { Comments } from './Comments';
 import { ArticleVotes } from './ArticleVotes';
+import { NewComment } from './NewComment';
 
 export const Article = () => {
 	const { article_id } = useParams();
@@ -34,6 +35,7 @@ export const Article = () => {
 					<img src={article.article_img_url} alt={`Image for ${article.title}`} />
 					<p>{article.body}</p>
 					<ArticleVotes article_id={article_id} initialVotes={article.votes} />
+					<NewComment />
 					<Comments article_id={article_id} />
 				</article>
 				<article className="sidebar">

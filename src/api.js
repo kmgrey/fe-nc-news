@@ -4,6 +4,12 @@ const newsApi = axios.create({
 	baseURL: 'https://nc-news-kdys.onrender.com/api',
 });
 
+export const fetchUsers = () => {
+	return newsApi.get(`/users`).then(({ data }) => {
+		return data.users;
+	});
+};
+
 export const fetchArticles = () => {
 	return newsApi.get('/articles').then(({ data }) => {
 		return data.articles;
@@ -25,6 +31,12 @@ export const fetchCommentsByArticle = (article_id) => {
 export const updateVotesByArticle = (article_id, incVotes) => {
 	return newsApi.patch(`/articles/${article_id}`, { inc_votes: incVotes }).then(({ data }) => {
 		return data.article;
+	});
+};
+
+export const postCommentToArticle = (article_id, {body, author}) => {
+	return newsApi.post(`/articles/${article_id}/comments`, {body, author}).then(({ data }) => {
+		return data.comments;
 	});
 };
 

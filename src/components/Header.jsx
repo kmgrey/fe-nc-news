@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavBar } from './NavBar';
+import { UserContext } from '../contexts/UserContext';
 
 export const Header = () => {
-	return (
-		<header>
-			<div>
-				<h1>Northcoders News</h1>
-				<p>Hello, User!</p>
-			</div>
-			<NavBar />
-		</header>
-	);
+    const { currentUser } = useContext(UserContext);
+
+    return (
+        <header>
+            <div>
+                <h1>Northcoders News</h1>
+                <p>Hello {currentUser ? currentUser.username : 'there'}!</p>
+            </div>
+            <NavBar />
+        </header>
+    );
 };
