@@ -10,9 +10,15 @@ export const fetchUsers = () => {
 	});
 };
 
-export const fetchArticles = () => {
-	return newsApi.get("/articles").then(({ data }) => {
+export const fetchArticles = (topic) => {
+	return newsApi.get("/articles", { params: { topic } }).then(({ data }) => {
 		return data.articles;
+	});
+};
+
+export const fetchTopics = () => {
+	return newsApi.get("/topics").then(({ data }) => {
+		return data.topics;
 	});
 };
 
@@ -47,9 +53,3 @@ export const postCommentToArticle = (article_id, { body, username }) => {
 export const deleteCommentFromArticle = (comment_id) => {
 	return newsApi.delete(`/comments/${comment_id}`);
 };
-
-// export const fetchArticles = (topic) => {
-// 	return newsApi.get('/articles', { params: { topic } }).then(({ data }) => {
-// 		return data.items;
-// 	});
-// };

@@ -16,7 +16,13 @@
 	}
 	.article-card {
 		width: 400px;
-		height: 400px;
+		height: 450px;
+	}
+	.article-card h3 {
+		font-size: 1.2rem;
+	}
+	.article-card .text-container {
+		font-size: 0.8rem;
 	}
 	.article-card img {
 		height: 250px;
@@ -47,7 +53,6 @@
 	display: flex;
 	height: 100%;
 	flex-direction: column;
-	justify-content: space-between;
 	text-transform: capitalize;
 	padding: 5px;
 }
