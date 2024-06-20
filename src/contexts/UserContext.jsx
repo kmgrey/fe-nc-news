@@ -1,5 +1,5 @@
-import React, { createContext, useState, useEffect } from 'react';
-import { fetchUsers } from '../api';
+import React, { createContext, useState, useEffect } from "react";
+import { fetchUsers } from "../api";
 
 export const UserContext = createContext();
 
@@ -11,10 +11,12 @@ export const UserProvider = ({ children }) => {
         fetchUsers()
             .then((usersFromApi) => {
                 setUsers(usersFromApi);
-                setCurrentUser();
+                if (usersFromApi.length > 0) {
+                    setCurrentUser(usersFromApi[0]);
+                }
             })
             .catch((error) => {
-                console.error('Error fetching users :(', error);
+                console.error("Error fetching users :(", error);
             });
     }, []);
 
@@ -23,7 +25,7 @@ export const UserProvider = ({ children }) => {
     };
 
     return (
-        <UserContext.Provider value={{ users, setUsers, currentUser, changeCurrentUser }}>
+        <UserContext.Provider value={{ users, currentUser, changeCurrentUser }}>
             {children}
         </UserContext.Provider>
     );

@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Header } from './components/Header';
-import { Articles } from './components/Articles';
-import { Article } from './components/Article';
-import { Users } from './components/Users';
-import { UserProvider } from './contexts/UserContext';
+import { Header } from "./components/Header";
+import { Articles } from "./components/Articles";
+import { Article } from "./components/Article";
+import { Users } from "./components/Users";
+import { UserProvider } from "./contexts/UserContext";
 
 function App() {
     return (
