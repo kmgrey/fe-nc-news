@@ -4,11 +4,13 @@ import { fetchArticles } from '../api';
 
 export const ArticleCards = ({ limit }) => {
 	const [articles, setArticles] = useState([]);
+	const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
 		fetchArticles()
 			.then((articlesFromApi) => {
 				setArticles(articlesFromApi);
+				setLoading(false)
 			})
 			.catch((error) => {
 				console.error('Error fetching articles :(', error);
@@ -16,7 +18,7 @@ export const ArticleCards = ({ limit }) => {
 	}, []);
 
 	const displayedArticles = limit ? articles.slice(0, limit) : articles;
-	if (!displayedArticles) return <p>Loading articles...</p>;
+	if (loading) return <p>Loading articles...</p>;
 
 	return (
 		<ul className="article-card-container">
