@@ -1,6 +1,6 @@
 @media only screen and (max-width: 550px) {
 	.article-card-container {
-		gap: 1rem;
+		row-gap: 1rem;
 	}
 	.article-card {
 		width: 350px;
@@ -16,7 +16,7 @@
 	}
 	.article-card {
 		width: 400px;
-		height: 450px;
+		height: 425px;
 	}
 	.article-card h3 {
 		font-size: 1.2rem;
@@ -28,6 +28,9 @@
 		height: 250px;
 	}
 }
+.sort-button {
+	text-align: center;
+}
 .article-section {
 	display: flex;
 	flex-direction: column;
@@ -37,7 +40,7 @@
 .article-card-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	padding: 0;
 }
 .article-card {
 	border: 3px solid lightcoral;
@@ -45,21 +48,23 @@
 	display: flex;
 	flex-direction: column;
 }
+.article-card-container a {
+	margin: auto;
+}
 .article-card img {
 	object-fit: cover;
 	width: 100%;
 }
 :is(.article-card) :is(.text-container) {
 	display: flex;
-	height: 100%;
 	flex-direction: column;
 	text-transform: capitalize;
 	padding: 5px;
 }
-:is(.article-card) :is(h3) {
-	padding: 5px;
+.text-container p {
+	padding: 0;
+	margin: 0;
 }
-:is(.article-card) :is(.author) {
-	color: pink;
-	font-style: italic;
+:is(.sidebar) :is(.sort-button) {
+	display: none;
 }

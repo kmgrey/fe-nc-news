@@ -10,8 +10,13 @@ export const fetchUsers = () => {
 	});
 };
 
-export const fetchArticles = (topic) => {
-	return newsApi.get("/articles", { params: { topic } }).then(({ data }) => {
+export const fetchArticles = (topic, sortBy, order) => {
+	const params = {
+		topic,
+		sort_by: sortBy,
+		order,
+	};
+	return newsApi.get("/articles", { params }).then(({ data }) => {
 		return data.articles;
 	});
 };
