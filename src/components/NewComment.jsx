@@ -36,6 +36,7 @@ export const NewComment = ({ article_id, onCommentPosted }) => {
 				placeholder="New comment..."
 				value={commentBody}
 				onChange={(event) => setCommentBody(event.target.value)}
+				required
 			/>
 			<button type="submit">Post Comment</button>
 		</form>

@@ -5,11 +5,14 @@ import { ArticleCards } from "./ArticleCards";
 import { Comments } from "./Comments";
 import { ArticleVotes } from "./ArticleVotes";
 import { NewComment } from "./NewComment";
+import { Error } from "./Error";
+import { Loading } from "./Loading";
 
 export const Article = () => {
 	const { article_id } = useParams();
 	const [article, setArticle] = useState(null);
 	const [comments, setComments] = useState([]);
+	const [articleExists, setArticleExists] = useState(true);
 
 	useEffect(() => {
 		fetchArticleById(article_id)
@@ -17,6 +20,7 @@ export const Article = () => {
 				setArticle(articleFromApi);
 			})
 			.catch((error) => {
+				setArticleExists(false);
 				console.error("Error fetching article :(", error);
 			});
 	}, [article_id]);
@@ -25,7 +29,8 @@ export const Article = () => {
 		setComments([...comments, newComment]);
 	};
 
-	if (!article) return <p>Loading...</p>;
+	if (!articleExists) return <Error />;
+	if (!article) return <Loading />;
 
 	return (
 		<>
