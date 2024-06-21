@@ -13,6 +13,9 @@
 	.article-container {
 		gap: 1.5rem;
 	}
+	.sidebar {
+		display: none;
+	}
 }
 @media only screen and (min-width: 1059px) {
 	.article-container {
@@ -24,7 +27,7 @@
 	}
 	:is(.sidebar) :is(.article-card) {
 		max-width: 18vw;
-		height: 300px;
+		height: 400px;
 	}
 }
 .article {
