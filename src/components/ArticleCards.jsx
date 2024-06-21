@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { fetchArticles } from "../api";
 import { SortButton } from "./SortButton";
+import { Loading } from "./Loading";
 
 export const ArticleCards = ({ limit, topic }) => {
 	const [articles, setArticles] = useState([]);
@@ -27,7 +28,7 @@ export const ArticleCards = ({ limit, topic }) => {
 
 	const displayedArticles = limit ? articles.slice(0, limit) : articles;
 
-	if (loading) return <p>Loading articles...</p>;
+	if (loading) return <Loading />;
 
 	return (
 		<section>

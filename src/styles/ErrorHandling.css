@@ -1,0 +1,16 @@
+.sidebar .loading img {
+	display: none;
+}
+.loading,
+.error {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	margin: 15px;
+}
+.loading img,
+.error img {
+	width: 350px;
+	height: auto;
+}
